@@ -26,6 +26,7 @@ export default async function Home() {
       <div className={styles.container}>
         { errTxt ? <span>{errTxt}</span> : <InfoGempa initialDataGempa={dataGempa} />}
       </div>
+      <div>{JSON.stringify(dataGempa)}</div>
     </main>
   );
 }
