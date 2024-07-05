@@ -13,6 +13,11 @@ export const metadata: Metadata = {
 };
 
 export default async function Home() {
+  const fetcher = await fetch(
+    "https://bmkg-content-inatews.storage.googleapis.com/datagempa.json",
+    { cache: "no-cache" }
+  );
+  const data = await fetcher.json()
   let errTxt: string = ""
   let dataGempa: DataGempaType = DataGempaTemplate;
   try {
@@ -26,7 +31,7 @@ export default async function Home() {
       <div className={styles.container}>
         { errTxt ? <span>{errTxt}</span> : <InfoGempa initialDataGempa={dataGempa} />}
       </div>
-      <div>{JSON.stringify(dataGempa)}</div>
+      <div>{JSON.stringify(data)}</div>
     </main>
   );
 }
