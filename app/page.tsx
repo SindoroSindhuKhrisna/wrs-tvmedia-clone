@@ -4,7 +4,7 @@ import Image from "next/image";
 import type { Metadata } from "next";
 import styles from "./page.module.css";
 import InfoGempa from "@/components/InfoGempa";
-import getDataGempa from "@/functions/fetcher";
+import getDataGempa from "@/functions/fetcher-server";
 import { DataGempaTemplate, DataGempaType } from "@/types/dataGempa";
 
 export const metadata: Metadata = {
