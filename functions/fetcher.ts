@@ -4,8 +4,7 @@ export default async function getDataGempa() {
   let dataGempa: DataGempaType = DataGempaTemplate;
   try {
     const fetcher = await fetch(
-      "https://bmkg-content-inatews.storage.googleapis.com/datagempa.json",
-      { cache: "no-cache" }
+      "https://bmkg-content-inatews.storage.googleapis.com/datagempa.json"
     );
     const data = await fetcher.json();
     const coordinates_lng_lat = data?.info?.point?.coordinates?.split[","] || [0, 0];
