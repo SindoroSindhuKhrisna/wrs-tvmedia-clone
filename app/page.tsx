@@ -14,8 +14,7 @@ export const metadata: Metadata = {
 
 export default async function Home() {
   const fetcher = await fetch(
-    "https://bmkg-content-inatews.storage.googleapis.com/datagempa.json",
-    { cache: "no-cache" }
+    "https://bmkg-content-inatews.storage.googleapis.com/datagempa.json"
   );
   const data = await fetcher.json()
   let errTxt: string = ""
