@@ -1,5 +1,4 @@
 "use server"
-export const runtime = 'edge'
 import { DataGempaTemplate, DataGempaType } from "@/types/dataGempa";
 
 export default async function getDataGempa() {
