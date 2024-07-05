@@ -25,6 +25,8 @@ export default async function getDataGempa() {
       longitude: parseFloat(coordinates_lng_lat[0]) || 0,
       depth_km: parseFloat(data?.info?.depth?.trim().split(" ")[0]) || 0,
     };
+    console.log(data);
+    console.log(dataGempa);
 
     return dataGempa;
   } catch (error) {
